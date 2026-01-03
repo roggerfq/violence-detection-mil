@@ -212,7 +212,8 @@ if device.type != "cpu":
 for param in model_movinet.parameters():
     param.requires_grad = False
 
-optimizer = torch.optim.Adagrad(net.parameters(), lr=0.001, weight_decay=0.001)
+#optimizer = torch.optim.Adagrad(net.parameters(), lr=0.001, weight_decay=0.001)
+optimizer = torch.optim.AdamW(net.parameters(), lr=1e-4, weight_decay=1e-4)
 
 
 #creating folder to store weights
