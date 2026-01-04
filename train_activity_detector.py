@@ -38,7 +38,14 @@ def get_args():
         default="./movinet_weights",
         help="Path to pretrained backbone model weights"
     )
-
+	
+    parser.add_argument(
+        "--checkpoint_path",
+        type=str,
+        default=None,
+        help="Path to pretrained classifier model weights"
+    )
+	
     parser.add_argument(
         "--batch_size",
         type=int,
@@ -148,13 +155,13 @@ class Net(nn.Module):
       def __init__(self):
          super(Net, self).__init__()
          self.linear_relu_stack = nn.Sequential(
-         nn.Linear(2048, 512),
+         nn.Linear(2048, 1024),
          nn.ReLU(),
          #nn.Dropout(0.6),
-         nn.Linear(512, 32),
+         nn.Linear(1024, 64),
          nn.ReLU(),
          #nn.Dropout(0.6),
-         nn.Linear(32, 1),
+         nn.Linear(64, 1),
          #nn.Dropout(0.6),
          nn.Sigmoid(),
          )
@@ -172,6 +179,7 @@ args = get_args()
 path_positive_clips = args.path_positive_clips
 path_negative_clips = args.path_negative_clips
 folder_backbone_model = args.folder_backbone_model
+checkpoint_path = args.checkpoint_path
 batch_size = args.batch_size
 epochs = args.epochs
 checkpoint_interval = args.checkpoint_interval
@@ -200,6 +208,15 @@ print(f"Using device: {device}")
 net = Net()
 net.to(device)
 
+
+
+if checkpoint_path and os.path.isfile(checkpoint_path):
+   full_model = torch.load(
+       checkpoint_path,
+       map_location=device,
+       weights_only=False   # 👈 tell PyTorch you trust this file
+   )
+   net.load_state_dict(full_model.state_dict())
 
 #folder_backbone_model = './movinet_weights'
 model_movinet = MoViNet(_C.MODEL.MoViNetA0, causal=True, pretrained=True, model_dir=folder_backbone_model)
