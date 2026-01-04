@@ -20,10 +20,10 @@ class Net(nn.Module):
          nn.Linear(2048, 1024),
          nn.ReLU(),
          #nn.Dropout(0.6),
-         nn.Linear(1024, 64),
+         nn.Linear(1024, 512),
          nn.ReLU(),
          #nn.Dropout(0.6),
-         nn.Linear(64, 1),
+         nn.Linear(512, 1),
          #nn.Dropout(0.6),
          nn.Sigmoid(),
          )
