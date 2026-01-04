@@ -154,6 +154,8 @@ for info in label_info:
     name_video = info['name_video']
     gt = info['gt']
     frame_count = get_number_frames(os.path.join(path_set_videos, name_video), new_fps)
+    if(frame_count < length_frames):
+       continue
 
     gt_frames = []
     if(len(gt) > 0):
@@ -170,7 +172,10 @@ for info in label_info:
         frame_s = i # 0 <= frame_s <= frame_count - 1
         # length_frames = frame_e - frame_s + 1 -> frame_e = frame_s + length_frames - 1
         frame_e = frame_s + length_frames - 1 
+         
+        
         if(frame_e < frame_count): # 0 <= frame_s <= frame_e <= frame_count - 1
+           #print(i, ' ', frame_s, ' ', frame_e, ' ', length_frames)
            window = (frame_s, frame_e) # the window always holds that window ⊆ [0, frame_count - 1]
            overlap = get_overlap(gt_frames, window)
            if(overlap >= overlap_positive_clip):
@@ -183,7 +188,28 @@ for info in label_info:
                overlap = get_overlap(gt_frames, window_and_padding)
                if(overlap == 0):
                   negative_clips.append({'name_video': name_video, 'window': window, 'label': -1})  
-               
+        else:
+           #######solving last segment######
+           if(frame_e > frame_count - 1):
+              frame_e = frame_count - 1
+              frame_s = frame_e - length_frames + 1
+           #################################
+           #print(i, ' ', frame_s, ' ', frame_e, ' ', length_frames)
+           window = (frame_s, frame_e) # the window always holds that window ⊆ [0, frame_count - 1]
+           overlap = get_overlap(gt_frames, window)
+           if(overlap >= overlap_positive_clip):
+               positive_clips.append({'name_video': name_video, 'window': window, 'label': 1})  
+           elif(overlap == 0):
+               #negative_clips.append({'name_video': name_video, 'window': window, 'label': -1})  
+               w1 = max(window[0] - 1, 0)
+               w2 = min(window[-1] + 1, frame_count - 1)
+               window_and_padding = (w1, w2)
+               overlap = get_overlap(gt_frames, window_and_padding)
+               if(overlap == 0):
+                  negative_clips.append({'name_video': name_video, 'window': window, 'label': -1})  
+
+           break
+        
 
 
 
@@ -219,7 +245,7 @@ for clip in all_clips:
 
 #write clips
 for name_video in dict_clips:
-
+  try:
     #Note: window is zero position based
     print(name_video)
     file_video = os.path.join(path_set_videos, name_video)
@@ -264,8 +290,8 @@ for name_video in dict_clips:
            break
     
     cap.release()
-
-
+  except Exception as e:
+    print("An error occurred:", e)
 
 ### making sure that the clips have the correct number of frames ###
 print('checking number of frames of each clip')
