@@ -8,6 +8,8 @@ from torch.utils.data import Dataset, DataLoader
 from movinets import MoViNet
 from movinets.config import _C
 
+from movinet_classifier import Net
+
 from BagClipsDataset import BagClipsDataset, imshow_bags
 from pathlib import Path
 
@@ -148,31 +150,6 @@ def train_loop(dataloader, model, model_movinet, optimizer, device, list_loss):
         list_loss.append(loss.item())
         if batch % step == 0 or batch == num_batches - 1:
            print(loss.item())
-
-
-#classifier
-class Net(nn.Module):
-      def __init__(self):
-         super(Net, self).__init__()
-         self.linear_relu_stack = nn.Sequential(
-         nn.Linear(2048, 1024),
-         nn.ReLU(),
-         #nn.Dropout(0.6),
-         nn.Linear(1024, 64),
-         nn.ReLU(),
-         #nn.Dropout(0.6),
-         nn.Linear(64, 1),
-         #nn.Dropout(0.6),
-         nn.Sigmoid(),
-         )
-         
-
-      def forward(self, x):
-          return self.linear_relu_stack(x)
-
-
-
-
 
 args = get_args()
 
