@@ -17,13 +17,13 @@ class Net(nn.Module):
       def __init__(self):
          super(Net, self).__init__()
          self.linear_relu_stack = nn.Sequential(
-         nn.Linear(2048, 512),
+         nn.Linear(2048, 1024),
          nn.ReLU(),
          #nn.Dropout(0.6),
-         nn.Linear(512, 32),
+         nn.Linear(1024, 64),
          nn.ReLU(),
          #nn.Dropout(0.6),
-         nn.Linear(32, 1),
+         nn.Linear(64, 1),
          #nn.Dropout(0.6),
          nn.Sigmoid(),
          )
