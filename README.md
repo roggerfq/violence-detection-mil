@@ -61,7 +61,7 @@ plt.show()
 ## Training
 The training requires two major steps. First, generate positive and negative video clip segments from the raw dataset. Then, using those video clip segments, train the architecture comprised of a MoViNet backbone and a 3-layer fully-connected binary classifier. The following image illustrates this process:
 
-![Full Architecture](docs/full_architecture.svg)
+![Full Architecture](https://raw.githubusercontent.com/roggerfq/violence-detection-mil/main/docs/full_architecture.svg)
 
 To run this process, open and execute the following three Google Colab notebooks in order. The first and second notebooks contain the process for video clip segment generation using the training set of the RWF-2000 and SCVD datasets respectively. These two notebooks can be skipped; proceed directly to the training notebook, which uses pre-generated video segments shared via a public Google Drive link.
 
@@ -81,7 +81,7 @@ To run this process, open and execute the following three Google Colab notebooks
 
 The algorithm evaluation uses the evaluation set of the RWF-2000 dataset. This set contains 200 short video segments containing scenes of violence and 200 short video segments that do not contain any type of violence. The following figure shows the ROC curve and AUC score obtained in this evaluation.
 
-![Full Architecture](docs/roc_curve.png)
+![ROC curve](https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/results/roc_curve.png)
 
 ## Author
 Roger Figueroa Quintero - [LinkedIn Profile](https://www.linkedin.com/in/roger-figueroa-quintero/)
