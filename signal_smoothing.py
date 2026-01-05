@@ -33,5 +33,7 @@ def smooth_scores(scores, polyorder=3, window_ratio=0.05):
 
     # Apply Savitzky–Golay filter
     scores_smooth = savgol_filter(y, window_length, polyorder)
+    scores_smooth = scores_smooth/max(max(scores_smooth),1)
 
     return scores_smooth
+
