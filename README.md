@@ -6,11 +6,8 @@ The following link hosts a live demo of the algorithm:
 
 [![Hugging Face Demo](https://img.shields.io/badge/🤗%20HuggingFace-Demo-yellow)](https://roggerfq-violence-detection.hf.space/)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/docs/VD-MIL.gif" width="49.5%">
-  <img src="https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/docs/VD-MIL-2.gif" width="49.5%">
-</p>
-
+<img src="https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/docs/VD-MIL.gif" width="100%">
+<img src="https://github.com/roggerfq/violence-detection-mil/blob/main/docs/VD-MIL-3.gif?raw=true" width="100%">
 
 ## Installation
 First, install the following fork of the MoViNet library:
