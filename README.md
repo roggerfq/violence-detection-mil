@@ -72,7 +72,7 @@ plt.show()
 ## Training
 The training requires two major steps. First, generate positive and negative video clip segments from the raw dataset. Then, using those video clip segments, train the architecture comprised of a MoViNet backbone and a fully-connected binary classifier. The following image illustrates this process:
 
-![Full Architecture](https://raw.githubusercontent.com/roggerfq/violence-detection-mil/main/docs/full_architecture.svg)
+![Full Architecture](https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/docs/full_architecture.svg)
 
 ### Video clip generation
 
