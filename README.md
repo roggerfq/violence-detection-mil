@@ -7,16 +7,17 @@ The following link hosts a live demo of the algorithm:
 [![Hugging Face Demo](https://img.shields.io/badge/🤗%20HuggingFace-Demo-yellow)](https://roggerfq-violence-detection.hf.space/)
 
 
-<table style="width: 100%; border-collapse: collapse;">
+<table>
   <tr>
-    <td align="center" style="padding: 0; margin: 0; height: 50vh;">
-      <img src="https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/docs/VD-MIL.gif" width="100%" style="height: 110%; object-fit: fill; display: block; margin: 0; padding: 0;">
+    <td align="center" style="padding: 0;">
+      <img src="https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/docs/VD-MIL.gif" width="100%" height="auto" style="min-height: 350px; max-height: 600px;">
     </td>
-    <td align="center" style="padding: 0; margin: 0; height: 50vh;">
-      <img src="https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/docs/VD-MIL-2.gif" width="100%" style="height: 110%; object-fit: fill; display: block; margin: 0; padding: 0;">
+    <td align="center" style="padding: 0;">
+      <img src="https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/docs/VD-MIL-2.gif" width="100%" height="auto" style="min-height: 350px; max-height: 600px;">
     </td>
   </tr>
 </table>
+
 
 ## Installation
 First, install the following fork of the MoViNet library:
