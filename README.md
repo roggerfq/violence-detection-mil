@@ -7,13 +7,13 @@ The following link hosts a live demo of the algorithm:
 [![Hugging Face Demo](https://img.shields.io/badge/🤗%20HuggingFace-Demo-yellow)](https://roggerfq-violence-detection.hf.space/)
 
 
-<table>
+<table style="border-collapse: collapse; width: 100%;">
   <tr>
-    <td align="center" style="padding: 0;">
-      <img src="https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/docs/VD-MIL.gif" width="100%" height="auto" style="min-height: 350px; max-height: 600px;">
+    <td style="padding: 0; margin: 0;">
+      <img src="https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/docs/VD-MIL.gif" width="100%" style="display: block;">
     </td>
-    <td align="center" style="padding: 0;">
-      <img src="https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/docs/VD-MIL-2.gif" width="100%" height="auto" style="min-height: 350px; max-height: 600px;">
+    <td style="padding: 0; margin: 0;">
+      <img src="https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/docs/VD-MIL-2.gif" width="100%" style="display: block;">
     </td>
   </tr>
 </table>
