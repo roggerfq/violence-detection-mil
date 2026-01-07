@@ -136,6 +136,10 @@ The algorithm evaluation uses the evaluation set of the RWF-2000 dataset. This s
 
 ![ROC curve](https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/results/roc_curve.png)
 
+You can run this evaluation in the following Google Colab notebook:
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1isW8w4tM5XTHCaOJiEYg1xGmxkgBEccQ?usp=sharing)
+
 ## Author
 Roger Figueroa Quintero - [LinkedIn Profile](https://www.linkedin.com/in/roger-figueroa-quintero/)
 
