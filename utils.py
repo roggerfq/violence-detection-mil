@@ -1,3 +1,21 @@
+"""
+Project: VD-MIL: A Deep Multiple Instance Learning Approach for Violence Detection in Surveillance Videos
+Author: Roger Figueroa Quintero
+Years: 2025–2026
+
+License: Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+
+This code is part of an academic/research project.
+You are free to use, modify, and share this code for non-commercial purposes only,
+provided that proper credit is given to the author.
+
+Commercial use of this code is strictly prohibited without explicit written permission
+from the author.
+
+Full license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+"""
+
+
 import os
 import threading
 import queue

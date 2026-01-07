@@ -140,7 +140,14 @@ The algorithm evaluation uses the evaluation set of the RWF-2000 dataset. This s
 Roger Figueroa Quintero - [LinkedIn Profile](https://www.linkedin.com/in/roger-figueroa-quintero/)
 
 ## License
-This project is licensed under the [MIT License](LICENSE.md), allowing unrestricted use, modification, and distribution under the terms of the license.
+
+This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)**.
+
+You are free to use, modify, and share this code for **non-commercial purposes only**, provided that proper credit is given to the author.
+
+**Commercial use is strictly prohibited** without explicit written permission from the author.
+
+© 2025–2026 Roger Figueroa Quintero
 
 ## References
 
