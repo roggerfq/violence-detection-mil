@@ -50,7 +50,7 @@ def sample_frames(path_video, q_frames, target_fps=8):
 
     frame_count = 0
     extracted_count = 0
-    next_frame_time = 0  # Time (in frame indices) when we should extract next frame
+    next_frame_time = 0  # This is the time (in frame indices) when we must extract next frame
 
     while True:
         ret, frame = cap.read()

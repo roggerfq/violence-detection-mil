@@ -152,6 +152,7 @@ def train_loop(dataloader, model, model_movinet, optimizer, device, list_loss):
             ya = torch.max(yav)
             ynv = y_i[sz_y//2:]
             yn = torch.max(ynv)
+            #Multi-Ranking Loss with Sparsity and Smoothness Constraints
             loss_i = torch.max(torch.zeros(1, dtype=torch.float32, device=device), 1-ya+yn) + 0.00008 * torch.sum(yav) + 0.00008 * torch.norm(torch.sub(yav[0:-1], yav[1:]))
             loss = loss + (1/sz_batch)*loss_i
             

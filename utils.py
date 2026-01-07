@@ -33,8 +33,7 @@ class Sampler(threading.Thread):
                 raise NameError('No se encuentra el archivo '+path_video)
              else:
                 self.cap.release()
-                raise NameError('No se encuentra el dispositivo') 
-          #NOTE: improve error handling before releasing to CAP
+                raise NameError('No se encuentra el dispositivo')
 
           self.original_fps = int(self.cap.get(cv2.CAP_PROP_FPS))
           if(self.original_fps <= 0):

@@ -67,7 +67,7 @@ def imshow_bags(data):
 
 
 def sample_clip(file_video, length_window, stride, new_size = None):
-    # a video with constant and integer fps is assumed
+    # We assume the video has a constant and integer frame rate
     cap = cv2.VideoCapture(file_video)
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)) 
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
