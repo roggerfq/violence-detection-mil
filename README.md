@@ -9,6 +9,11 @@ The following link hosts a live demo of the algorithm:
 <img src="https://raw.githubusercontent.com/roggerfq/violence-detection-mil/refs/heads/main/docs/VD-MIL.gif" width="100%">
 <img src="https://github.com/roggerfq/violence-detection-mil/blob/main/docs/VD-MIL-3.gif?raw=true" width="100%">
 
+The following links show some videos processed by the demo deployed on Hugging Face:
+
+**Shooting:** [1](https://youtu.be/NArPc8L_0tA) · [2](https://youtu.be/v3zjfdOLh9k) · [3](https://youtu.be/heWqB8QTcOg) · [4](https://youtu.be/56QITPv3bLM) · [5](https://youtu.be/CZsm-BkPAOw) · [6](https://youtu.be/44jW2XbkMS4)  
+**Fight:** [1](https://youtu.be/p7UYQqPe_fA) · [2](https://youtu.be/-f9va9idhG0)
+
 ## Installation
 First, install the following fork of the MoViNet library:
 ```bash
